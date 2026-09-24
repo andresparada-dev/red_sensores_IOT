@@ -57,6 +57,8 @@ public class IngestaSensores {
         BancoDePruebas.experimentoCuatro();
     }
 
+
+
     private static void imprimirResumenIngesta(
             RepositorioLecturas repositorio) {
 
@@ -158,4 +160,6 @@ public class IngestaSensores {
             return null;
         }
     }
+
+
 }
