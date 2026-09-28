@@ -65,4 +65,46 @@ Búsqueda
 Medición de eficiencia
 ```
 
+
+
+# Decisiones de diseño — Semana 3
+
+## Búsqueda binaria por timestamp
+
+### Precondición
+
+La búsqueda binaria requiere que las lecturas estén ordenadas
+ascendentemente por timestamp.
+
+### Condición actual del proyecto
+
+`GeneradorDatos` produce timestamps en orden cronológico.
+
+### Decisión
+
+Utilizar búsqueda binaria para consultas por timestamp.
+
+### Justificación
+
+La búsqueda binaria reduce el número de comparaciones
+de un crecimiento O(n) a un crecimiento O(log n),
+siempre que se mantenga la precondición de ordenamiento.
+
+## PM2.5
+
+No se utilizará directamente búsqueda binaria sobre PM2.5
+mientras los datos no estén ordenados por ese campo.
+
+El experimento de la Semana 3 demuestra la importancia
+de respetar las precondiciones de un algoritmo.
+
+## Pregunta pendiente
+
+¿Conviene ordenar los datos antes de realizar las búsquedas?
+
+Esta pregunta será retomada en la Semana 4.
+
+
+
+
 La Semana 4 podrá extender esta misma arquitectura para estudiar ordenamiento.
