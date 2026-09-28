@@ -64,4 +64,44 @@ public class BancoDePruebas {
 
         System.out.println();
     }
+    /**
+     * Experimento 2: compara búsqueda lineal y búsqueda binaria.
+     */
+    public static void experimentoDos() {
+        System.out.println("=== EXPERIMENTO 2: LINEAL vs BINARIA ===");
+        System.out.printf("%12s %14s %14s %12s%n", "lecturas", "lineal", "binaria", "relacion");
+
+        for (int n : TAMANOS) {
+            LecturaSensor[] datos = GeneradorDatos.generar(n);
+            String objetivo = GeneradorDatos.timestampEnPosicion(n - 1);
+
+            BuscadorLecturas.busquedaLinealPorTimestamp(datos, objetivo);
+            int lineal = BuscadorLecturas.getComparaciones();
+
+            BuscadorLecturas.busquedaBinariaPorTimestamp(datos, objetivo);
+            int binaria = BuscadorLecturas.getComparaciones();
+
+            System.out.printf("%12d %14d %14d %12.1f%n", n, lineal, binaria, (double) lineal / binaria);
+        }
+        System.out.println();
+    }
+
+    public static void experimentoTres() {
+        System.out.println("=== EXPERIMENTO 3: DATO INEXISTENTE ===");
+        LecturaSensor[] datos = GeneradorDatos.generar(100_000);
+        String objetivo = GeneradorDatos.timestampInexistente();
+
+        BuscadorLecturas.busquedaLinealPorTimestamp(datos, objetivo);
+        int lineal = BuscadorLecturas.getComparaciones();
+
+        BuscadorLecturas.busquedaBinariaPorTimestamp(datos, objetivo);
+        int binaria = BuscadorLecturas.getComparaciones();
+
+        System.out.println("Lineal  -> comparaciones: " + lineal);
+        System.out.println("Binaria -> comparaciones: " + binaria);
+        System.out.println();
+    }
+
+
+    
 }
