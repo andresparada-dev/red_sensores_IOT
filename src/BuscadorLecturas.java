@@ -39,6 +39,7 @@ public class BuscadorLecturas {
 
         return -1;
     }
+
     /**
      * Busca la primera lectura de una estación.
      *
@@ -105,4 +106,40 @@ public class BuscadorLecturas {
         return -1;
     }
 
+    /**
+     * Búsqueda binaria por PM2.5.
+     *
+     * PRECONDICIÓN:
+     * el arreglo debe estar ordenado ascendentemente por PM2.5.
+     * (Requerido para el Experimento 4)
+     */
+    public static int busquedaBinariaPorPm25(
+            LecturaSensor[] datos,
+            double pm25) {
+
+        comparaciones = 0;
+
+        int inicio = 0;
+        int fin = datos.length - 1;
+
+        while (inicio <= fin) {
+
+            int medio = (inicio + fin) / 2;
+
+            comparaciones++;
+
+            if (datos[medio].getPm25() == pm25) {
+                return medio;
+            }
+
+            if (datos[medio].getPm25() < pm25) {
+                inicio = medio + 1;
+            } else {
+                fin = medio - 1;
+            }
+        }
+
+        return -1;
+    }
 }
+
