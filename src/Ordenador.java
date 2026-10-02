@@ -60,14 +60,22 @@ public class Ordenador {
     public static void burbuja(LecturaSensor[] datos) {
         reiniciarContadores();
         int n = datos.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
-                if (comparar(datos[j], datos[j + 1]) > 0) {
-                    intercambiar(datos, j, j + 1);
-                }
+    for (int i = 0; i < n - 1; i++) {
+        boolean huboIntercambio = false; // <-- LA BANDERA DE LA GUÍA
+
+        for (int j = 0; j < n - 1 - i; j++) {
+            if (comparar(datos[j], datos[j + 1]) > 0) { // <-- EL COMPARAR DEL PROFESOR
+                intercambiar(datos, j, j + 1);
+                huboIntercambio = true; // <-- LA BANDERA DE LA GUÍA
             }
         }
+
+        // <-- EL CORTE TEMPRANO DE LA GUÍA
+        if (!huboIntercambio) {
+            break; 
+        }
     }
+}
 
 
 
