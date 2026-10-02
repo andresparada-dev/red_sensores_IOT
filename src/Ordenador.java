@@ -55,7 +55,7 @@ public class Ordenador {
      * TODO 1: este metodo hace el mismo trabajo aunque el arreglo
      * ya venga ordenado. Agregale una bandera que detecte que en
      * una pasada completa no hubo ningun intercambio, y corte ahi.
-     * Mide el antes y el despues con datos ya ordenados.
+     * Mide el antes y el despues con datos ya ordenados. Falta Bandera
      */
     public static void burbuja(LecturaSensor[] datos) {
         reiniciarContadores();
@@ -68,6 +68,8 @@ public class Ordenador {
             }
         }
     }
+
+
 
     /**
      * Ordenamiento por seleccion. Busca el menor y lo pone al inicio.
