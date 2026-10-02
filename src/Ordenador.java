@@ -173,7 +173,7 @@ public class Ordenador {
      *
      * Cuando entiendas por que, corrigelo eligiendo mejor el pivote.
      */
-    public static void quickSortPivotePrimero(LecturaSensor[] datos) {
+        public static void quickSortPivotePrimero(LecturaSensor[] datos) {
         reiniciarContadores();
         quickRecursivo(datos, 0, datos.length - 1);
     }
@@ -186,8 +186,16 @@ public class Ordenador {
     }
 
     private static int particionar(LecturaSensor[] datos, int inicio, int fin) {
+        // TODO 2: Elegimos una posición al azar dentro del rango actual
+        int posicion = inicio + (int) (Math.random() * (fin - inicio + 1));
+
+        // Intercambiamos el elemento de esa posición aleatoria con el primero
+        intercambiar(datos, inicio, posicion);
+
+        // Ahora iniciamos la partición de forma segura con el nuevo elemento como pivote
         LecturaSensor pivote = datos[inicio];
         int limite = inicio;
+        
         for (int i = inicio + 1; i <= fin; i++) {
             if (comparar(datos[i], pivote) < 0) {
                 limite++;
@@ -197,6 +205,7 @@ public class Ordenador {
         intercambiar(datos, inicio, limite);
         return limite;
     }
+
 
     /**
      * HeapSort. Ordena usando una estructura llamada monticulo.
