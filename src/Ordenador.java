@@ -119,7 +119,7 @@ public class Ordenador {
     }
 
     // =========================================================
-    //  2.8  ALGORITMOS AVANZADOS
+    //  2.8  Implementación de ALGORITMOS AVANZADOS
     // =========================================================
 
     /**
@@ -161,6 +161,8 @@ public class Ordenador {
             intercambios++;
         }
     }
+
+
 
     /**
      * QuickSort con el PRIMER elemento como pivote.
