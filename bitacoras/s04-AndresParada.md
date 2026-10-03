@@ -91,8 +91,13 @@ Con solo 5 datos no pasa nada, pero con 50.000 esos "n niveles apilados" son los
 
 | Commit | Mensaje | Que demuestra |
 |---|---|---|
-| `[hash corto]` | `feat: agregar BancoDeOrdenamiento con los 5 experimentos e integrarlo a IngestaSensores` | Que armé el banco y lo integré al único main |
-| `[hash corto]` | `docs: registrar DEC-04 y DEC-05, bitacora y grafica semana 4` | Que documenté las decisiones y la evidencia |
+| `c3f1fde` | `feat: implementar ordenamientos simples` | Burbuja, Selección e Inserción |
+| `35a3d28` | `fix: agregar corte temprano a burbuja` | TODO 1: la bandera de Burbuja |
+| `b0c9ebc` | `feat: implementar ordenamientos avanzados` | MergeSort, HeapSort y QuickSort |
+| `07af0a4` | `feat: Cambiar el Pivote para QuickSort` | TODO 2: pivote aleatorio |
+| `668e738` | `feat: agregar BancoDeOrdenamiento con los 5 experimentos e integrarlo a IngestaSensores` | Banco de experimentos integrado al único main |
+| `006a1b0` | `docs: registrar DEC-04 y DEC-05 y grafica semana 4` | Decisiones y evidencia |
+| `9b45d18` | `docs: registrar Bitacora semana 4` | Bitácora individual |
 
 ## 10. Reexplicacion final
 
