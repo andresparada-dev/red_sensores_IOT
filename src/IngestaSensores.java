@@ -38,6 +38,7 @@ public class IngestaSensores {
         // Los experimentos son parte de esta misma aplicación.
         //
         ejecutarExperimentosSemanaTres();
+        ejecutarExperimentosSemanaCuatro();
     }
 
     /**
@@ -56,6 +57,19 @@ public class IngestaSensores {
         BancoDePruebas.experimentoTres();
         BancoDePruebas.experimentoCuatro();
     }
+    private static void ejecutarExperimentosSemanaCuatro() {
+    System.out.println();
+    System.out.println("====================================================");
+    System.out.println("       SEMANA 4 - ORDENAMIENTOS Y EFICIENCIA");
+    System.out.println("====================================================");
+    System.out.println();
+
+    BancoDeOrdenamiento.experimentoUno();
+    BancoDeOrdenamiento.experimentoDos();
+    BancoDeOrdenamiento.experimentoTres();
+    BancoDeOrdenamiento.experimentoCuatro();
+    BancoDeOrdenamiento.experimentoCinco();
+}
 
 
 
